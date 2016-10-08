@@ -44,5 +44,27 @@ public class TriangleCBlochingTest {
 		TriangleResult expected = TriangleResult.UNKNOWN;
 		assertThat(triangle.getTriangleResultForLenghts(input)).isEqualTo(expected);	
 	}
+	@Test
+	public void testGetTriangleResultForLenghtsParameters() throws Exception {
+		int [] input = {13,12,60,14};
+		TriangleResult expected = TriangleResult.UNKNOWN;
+		assertThat(triangle.getTriangleResultForLenghts(input)).isEqualTo(expected);	
+	}
+	@Test
+	public void testGetTriangleResultForLenghtsNoTriangle() throws Exception {
+		int [] input = {13,12,120};
+		TriangleResult expected = TriangleResult.UNKNOWN;
+		assertThat(triangle.getTriangleResultForLenghts(input)).isEqualTo(expected);	
+	}
+	@Test
+	public void testGetTriangleResultForLenghtsZero() throws Exception {
+		int [] input = {0,0,-1};
+		TriangleResult expected = TriangleResult.UNKNOWN;
+		assertThat(triangle.getTriangleResultForLenghts(input)).isEqualTo(expected);	
+	}
+	@Test
+	public void testGetTriangleResultForLenghtsZeroProtected() throws Exception {
+		assertThat(new TriangleCBloching().isNotEqualOrLessZero(1,1,-1)).isFalse();	
+	}
 
 }
