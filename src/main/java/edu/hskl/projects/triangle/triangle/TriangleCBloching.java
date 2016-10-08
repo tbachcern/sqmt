@@ -13,7 +13,7 @@ public class TriangleCBloching extends Triangle {
 			int c = lengths[2];
 			
 			if(checkIsTriangle(a, b, c) == true){
-				if(checkNotEqualOrLessZero(a, b, c) == true){
+				if(isNotEqualOrLessZero(a, b, c) == true){
 					if(checkEQUILATERAL(a, b, c) == true){
 						return TriangleResult.TRIANGLE_EQUILATERAL;
 					}else{
@@ -49,7 +49,7 @@ public class TriangleCBloching extends Triangle {
 		}
 	}
 	
-	private boolean checkNotEqualOrLessZero(int ta, int tb, int tc){
+	protected boolean isNotEqualOrLessZero(int ta, int tb, int tc){
 		if(ta <= 0 || tb <= 0 || tc <= 0){
 			return false;
 		}
