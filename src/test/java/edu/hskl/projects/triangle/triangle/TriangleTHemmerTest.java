@@ -29,7 +29,7 @@ public class TriangleTHemmerTest {
 		int[] input = {11, 11, 11};
 		TriangleResult expected = TriangleResult.TRIANGLE_EQUILATERAL;
 		assertThat(triangle.getTriangleResultForLenghts(input)).isEqualTo(expected);
-	}
+	} 
 	
 	@Test
 	public void testGetTriangleResultForLenghtsEquileteral2() throws Exception {
