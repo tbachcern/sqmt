@@ -8,6 +8,11 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+
+      TriangleTHemmer dreieck1 = new TriangleTHemmer();
+      
+      dreieck1.getTriangleResultForLenghts();
+      
+
     }
 }
