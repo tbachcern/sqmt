@@ -11,7 +11,7 @@ public class TriangleNWernerTest {
 
 	@Before
 	public void setUp() throws Exception {
-		triangle = new TriangleDaniel();
+		triangle = new TriangleNWerner();
 	}
 
 	@Test
@@ -66,14 +66,14 @@ public class TriangleNWernerTest {
 	@Test
 	public void testGetTriangleResultForLenghtsEquilateral8() throws Exception {
 		final int[] input = { 10, 113, 11 };
-		final TriangleResult expected = TriangleResult.TRIANGLE_NOT_EQUAL;
+		final TriangleResult expected = TriangleResult.UNKNOWN;
 		assertThat(triangle.getTriangleResultForLenghts(input)).isEqualTo(expected);
 	}
 
 	@Test
 	public void testGetTriangleResultForLenghtsEquilateral9() throws Exception {
 		final int[] input = { 17, 45, 2 };
-		final TriangleResult expected = TriangleResult.TRIANGLE_NOT_EQUAL;
+		final TriangleResult expected = TriangleResult.UNKNOWN;
 		assertThat(triangle.getTriangleResultForLenghts(input)).isEqualTo(expected);
 	}
 
@@ -125,5 +125,11 @@ public class TriangleNWernerTest {
 		final TriangleResult expected = TriangleResult.UNKNOWN;
 		assertThat(triangle.getTriangleResultForLenghts(input)).isEqualTo(expected);
 	}
-
+	
+	@Test
+	public void testGetTriangleResultForLenghtsEquilateral17() throws Exception {
+		final int[] input = { 10, 2, 2 };
+		final TriangleResult expected = TriangleResult.UNKNOWN;
+		assertThat(triangle.getTriangleResultForLenghts(input)).isEqualTo(expected);
+	}
 }

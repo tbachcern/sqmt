@@ -1,5 +1,8 @@
 package edu.hskl.projects.triangle.triangle;
 
+
+import java.util.Arrays;
+
 public class TriangleNWerner extends Triangle {
 
 	@Override
@@ -15,6 +18,15 @@ public class TriangleNWerner extends Triangle {
 			}
 		}
 		
+		int[] tmpArray = new int[lengths.length];
+		tmpArray = Arrays.copyOf(lengths, lengths.length);
+		
+		Arrays.sort(tmpArray);
+		
+		if(tmpArray[2]>(tmpArray[0]+tmpArray[1])){
+			return TriangleResult.UNKNOWN;
+		}
+			
 		if(lengths[0]==lengths[1] && lengths[1]==lengths[2]){
 			return TriangleResult.TRIANGLE_EQUILATERAL;
 		}
