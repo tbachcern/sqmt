@@ -34,5 +34,6 @@ public class ScaryBugs {
 	public static void main(final String[] args) {
 		new ScaryBugs().executeSomeConditions();
 		incorrectAssignmentInIfCondition();
+		System.out.println("TestKommentar");
 	}
 }
